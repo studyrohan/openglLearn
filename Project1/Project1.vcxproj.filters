@@ -8,6 +8,15 @@
     <Filter Include="src">
       <UniqueIdentifier>{a01dfaf4-789c-4141-bf1a-3f29ba0af7ae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="NewFilter1">
+      <UniqueIdentifier>{474f84a4-cf12-4601-911d-8886608888f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{0fec39cb-7296-43de-8b13-d143e997183d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Tools">
+      <UniqueIdentifier>{01bb190c-544e-4bdc-aa13-97dee194db25}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\application.cpp">
@@ -19,10 +28,36 @@
     <ClCompile Include="src\basic.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\wenli.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tools.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\head.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\texture.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="src\tools.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tools\shader.h">
+      <Filter>src\Tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Project1.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resource\container.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

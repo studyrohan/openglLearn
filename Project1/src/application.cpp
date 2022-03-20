@@ -8,6 +8,8 @@
 //}
 #include <GLFW/glfw3.h>
 #include "head.h"
+#include "texture.h"
+
 int test()
 {
     GLFWwindow* window;
@@ -58,6 +60,7 @@ int main(void)
     //drawTriangle();
     //drawRectangle();
     //drawTwoSameTriangle();
-    drawTwoSameTriangleWithdifferentCollor();
+    //drawTwoSameTriangleWithdifferentCollor();
+    testPicture();
     return 0;
 }
