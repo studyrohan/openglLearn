@@ -7,6 +7,8 @@
 
 #include "head.h"
 #include "tools.h"
+//#define STB_IMAGE_IMPLEMENTATION
+#include "Tools/std_image.h"
 
 void key_callback(GLFWwindow* windows, int key, int scanCode, int action, int mode)
 {
@@ -471,5 +473,13 @@ int drawRectangle()
 	return 0;
 }
 
+int testPicture1()
+{
+	int width, height, nrChannels;
+	unsigned char* data = stbi_load("container.jpg", &width, &height, &nrChannels, 0);
+	unsigned int texture;
+	glGenBuffers(1, &texture);
+	return 0;
+}
 //211224199512266914
 //liuhan1226

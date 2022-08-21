@@ -9,6 +9,7 @@
 #include <GLFW/glfw3.h>
 #include "head.h"
 #include "texture.h"
+#include "translate.h"
 
 int test()
 {
@@ -61,6 +62,8 @@ int main(void)
     //drawRectangle();
     //drawTwoSameTriangle();
     //drawTwoSameTriangleWithdifferentCollor();
-    testPicture();
+    //testPicture();
+    //testTexture();
+    testTranslate();
     return 0;
 }

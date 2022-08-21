@@ -17,6 +17,12 @@
     <Filter Include="src\Tools">
       <UniqueIdentifier>{01bb190c-544e-4bdc-aa13-97dee194db25}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\glm">
+      <UniqueIdentifier>{0fd9ae77-cdb5-4f2b-a6d8-54f62185174d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\glm\gtx">
+      <UniqueIdentifier>{b0763157-37b1-42fa-9fc3-6812615ef7e3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\application.cpp">
@@ -34,6 +40,12 @@
     <ClCompile Include="src\tools.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\testTexture.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\translate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\head.h">
@@ -49,6 +61,81 @@
     <ClInclude Include="src\Tools\shader.h">
       <Filter>src\Tools</Filter>
     </ClInclude>
+    <ClInclude Include="src\Tools\std_image.h">
+      <Filter>src\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\common.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\exponential.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\ext.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\fwd.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\geometric.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\glm.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\integer.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\mat2x2.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\mat2x3.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\mat2x4.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\mat3x2.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\mat3x3.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\mat3x4.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\mat4x2.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\mat4x3.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\mat4x4.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\matrix.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\packing.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\trigonometric.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\vec2.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\vec3.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\vec4.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\glm\vector_relational.hpp">
+      <Filter>src\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\translate.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Project1.rc">
@@ -59,5 +146,13 @@
     <Image Include="resource\container.jpg">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="resource\awesomeface.png">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\glm\CMakeLists.txt">
+      <Filter>src\glm</Filter>
+    </Text>
   </ItemGroup>
 </Project>

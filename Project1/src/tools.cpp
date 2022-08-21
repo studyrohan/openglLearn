@@ -33,7 +33,7 @@ int InitGlAndCreateWindow(GLFWwindow** window)
 	int width, height;
 	glfwGetFramebufferSize(*window, &width, &height);
 	glViewport(0, 0, width, height);
-	glfwSetKeyCallback(*window, key_callback);
+	//glfwSetKeyCallback(*window, key_callback);
 	return 0;
 
 }
