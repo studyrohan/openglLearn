@@ -10,6 +10,8 @@
 #include "head.h"
 #include "texture.h"
 #include "translate.h"
+#include "CoordinateSystem.h"
+#pragma comment( linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"" )
 
 int test()
 {
@@ -64,6 +66,9 @@ int main(void)
     //drawTwoSameTriangleWithdifferentCollor();
     //testPicture();
     //testTexture();
-    testTranslate();
+    //testTranslate();
+    //testPictureCoordianteTrans();
+    //testPictureCoordiante36face();
+    testPictureCamera();
     return 0;
 }
