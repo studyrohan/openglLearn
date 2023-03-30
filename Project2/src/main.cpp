@@ -1,8 +1,69 @@
 #include <winsock2.h>
 #include <stdio.h>
+#include <memory>
+
+class MyClass
+{
+public:
+	MyClass(int _a);
+	~MyClass();
+
+private:
+	int a;
+
+};
+
+MyClass::MyClass(int _a)
+	:a(_a)
+{
+}
+
+MyClass::~MyClass()
+{
+}
+
+class B
+{
+public:
+	B();
+	~B();
+
+private:
+	int c=0;
+};
+
+B::B()
+{
+}
+
+B::~B()
+{
+}
+std::unique_ptr<B> pass_through(std::unique_ptr<B> p)
+{
+	return p;
+}
+int  testUniquePtr()
+{
+
+	static std::unique_ptr< MyClass> A;
+	//std::unique_ptr< MyClass> A1 = std::make_unique<MyClass>(); //error
+	std::unique_ptr< B> b;
+
+	std::unique_ptr< B> b1 = std::make_unique<B>();
+
+	b = std::make_unique < B>(*b1.get());
+	std::unique_ptr<B>b2 = pass_through(std::move(b1));
+	return 0;
+}
+
 int main()
 {
 	// init socket
+
+	return testUniquePtr();
+	//std::unique_ptr<B>b2 = pass_through(b1);// complie error;
+
 	WORD wVersionRequested = MAKEWORD(2, 2);
 	WSADATA wsaData;
 	int err = WSAStartup(wVersionRequested, &wsaData);
