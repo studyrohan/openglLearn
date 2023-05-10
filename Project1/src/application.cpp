@@ -7,6 +7,8 @@
 //	return 0;
 //}
 #include <GLFW/glfw3.h>
+#include <iostream>
+
 #include "head.h"
 #include "texture.h"
 #include "translate.h"
@@ -57,6 +59,115 @@ int test()
     glfwTerminate();
     return 0;
 }
+
+const int WIDTH = 800;
+const int HEIGHT = 600;
+
+static float lastX = WIDTH / 2.0f;
+static float lastY = HEIGHT / 2.0f;
+static bool firstMouse = true;
+
+void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
+	glViewport(0, 0, width, height);
+}
+
+void processInput(GLFWwindow* window) {
+	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+		glfwSetWindowShouldClose(window, true);
+}
+
+void mouse_button_callback(GLFWwindow* window, int button, int action, int mods) {
+	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
+		firstMouse = true;
+	}
+}
+
+void cursor_position_callback(GLFWwindow* window, double xpos, double ypos) {
+	float xoffset = xpos - lastX;
+	float yoffset = lastY - ypos; // Reversed since y-coordinates go from bottom to left
+	lastX = xpos;
+	lastY = ypos;
+
+	if (firstMouse) {
+		xoffset = 0.0f;
+		yoffset = 0.0f;
+		firstMouse = false;
+	}
+
+	std::cout << "Mouse offset: (" << xoffset << ", " << yoffset << ")" << std::endl;
+
+	// Rotate model with mouse movement
+	float sensitivity = 0.1f; // Adjust this value to your liking
+	xoffset *= sensitivity;
+	yoffset *= sensitivity;
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	glRotatef(xoffset, 0.0f, 1.0f, 0.0f);
+	glRotatef(yoffset, 1.0f, 0.0f, 0.0f);
+}
+
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
+	std::cout << "Scroll offset: (" << xoffset << ", " << yoffset << ")" << std::endl;
+
+	// Scale model with mouse scroll
+	float sensitivity = 0.1f; // Adjust this value to your liking
+	yoffset *= sensitivity;
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	glScalef(1.0f + yoffset, 1.0f + yoffset, 1.0f + yoffset);
+}
+
+int test5() {
+	// 初始化 GLFW
+	if (!glfwInit()) {
+		std::cout << "Failed to initialize GLFW" << std::endl;
+		return -1;
+	}
+
+	// 创建窗口
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Triangle", NULL, NULL);
+	if (!window) {
+		std::cout << "Failed to create GLFW window" << std::endl;
+		glfwTerminate();
+		return -1;
+	}
+	glfwMakeContextCurrent(window);
+
+	// 设置回调函数
+	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	glfwSetMouseButtonCallback(window, mouse_button_callback);
+	glfwSetCursorPosCallback(window, cursor_position_callback);
+	glfwSetScrollCallback(window, scroll_callback);
+
+	// 设置 OpenGL 上下文参数
+	glViewport(0, 0, WIDTH, HEIGHT);
+	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+
+	// 绘制三角形
+	while (!glfwWindowShouldClose(window)) {
+		processInput(window);
+
+		glClear(GL_COLOR_BUFFER_BIT);
+
+		glBegin(GL_TRIANGLES);
+		glColor3f(1.0f, 0.0f, 0.0f);
+		glVertex3f(-0.5f, -0.5f, 0.0f);
+		glColor3f(0.0f, 1.0f, 0.0f);
+		glVertex3f(0.5f, -0.5f, 0.0f);
+		glColor3f(0.0f, 0.0f, 1.0f);
+		glVertex3f(0.0f, 0.5f, 0.0f);
+		glEnd();
+
+		glfwSwapBuffers(window);
+		glfwPollEvents();
+	}
+
+	// 清理资源
+	glfwTerminate();
+	return 0;
+}
 int main(void)
 {
     //func();
@@ -69,6 +180,8 @@ int main(void)
     //testTranslate();
     //testPictureCoordianteTrans();
     //testPictureCoordiante36face();
-    testPictureCamera();
+    //testPictureCamera();
+    //test5();
+	testRoateCube();
     return 0;
 }

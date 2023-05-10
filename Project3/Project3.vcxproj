@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{85ac6d8f-66ff-44b0-ba39-082d544e6adb}</ProjectGuid>
-    <RootNamespace>Project1</RootNamespace>
+    <ProjectGuid>{21B78420-E880-437B-8E7F-47B303BF8440}</ProjectGuid>
+    <RootNamespace>Project3</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -159,52 +159,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\application.cpp" />
-    <ClCompile Include="src\basic.cpp" />
-    <ClCompile Include="src\CoordinateSystem.cpp" />
-    <ClCompile Include="src\rotate.cpp" />
-    <ClCompile Include="src\rotateCube.cpp" />
-    <ClCompile Include="src\src1.cpp" />
-    <ClCompile Include="src\testTexture.cpp" />
-    <ClCompile Include="src\tools.cpp" />
-    <ClCompile Include="src\translate.cpp" />
-    <ClCompile Include="src\wenli.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_demo.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_opengl2.cpp" />
+    <ClCompile Include="imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="imgui\imgui_tables.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="src\CoordinateSystem.h" />
-    <ClInclude Include="src\glm\common.hpp" />
-    <ClInclude Include="src\glm\exponential.hpp" />
-    <ClInclude Include="src\glm\ext.hpp" />
-    <ClInclude Include="src\glm\fwd.hpp" />
-    <ClInclude Include="src\glm\geometric.hpp" />
-    <ClInclude Include="src\glm\glm.hpp" />
-    <ClInclude Include="src\glm\integer.hpp" />
-    <ClInclude Include="src\glm\mat2x2.hpp" />
-    <ClInclude Include="src\glm\mat2x3.hpp" />
-    <ClInclude Include="src\glm\mat2x4.hpp" />
-    <ClInclude Include="src\glm\mat3x2.hpp" />
-    <ClInclude Include="src\glm\mat3x3.hpp" />
-    <ClInclude Include="src\glm\mat3x4.hpp" />
-    <ClInclude Include="src\glm\mat4x2.hpp" />
-    <ClInclude Include="src\glm\mat4x3.hpp" />
-    <ClInclude Include="src\glm\mat4x4.hpp" />
-    <ClInclude Include="src\glm\matrix.hpp" />
-    <ClInclude Include="src\glm\packing.hpp" />
-    <ClInclude Include="src\glm\trigonometric.hpp" />
-    <ClInclude Include="src\glm\vec2.hpp" />
-    <ClInclude Include="src\glm\vec3.hpp" />
-    <ClInclude Include="src\glm\vec4.hpp" />
-    <ClInclude Include="src\glm\vector_relational.hpp" />
-    <ClInclude Include="src\head.h" />
-    <ClInclude Include="src\texture.h" />
-    <ClInclude Include="src\tools.h" />
-    <ClInclude Include="src\Tools\shader.h" />
-    <ClInclude Include="src\Tools\std_image.h" />
-    <ClInclude Include="src\translate.h" />
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="imgui\imgui_impl_opengl2.h" />
+    <ClInclude Include="imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Project1.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resource\awesomeface.png" />
