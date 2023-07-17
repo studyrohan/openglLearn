@@ -2,3 +2,4 @@
 
 
 int lightTest();
+int start();
