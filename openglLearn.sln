@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project1", "Project1\Project1.vcxproj", "{85AC6D8F-66FF-44B0-BA39-082D544E6ADB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project1_X86", "Project1\Project1.vcxproj", "{85AC6D8F-66FF-44B0-BA39-082D544E6ADB}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project2", "Project2\Project2.vcxproj", "{826AFE21-1A22-40B9-AA3D-E6C754B3F681}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project3", "Project3\Project3.vcxproj", "{21B78420-E880-437B-8E7F-47B303BF8440}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project4", "Project4\Project4.vcxproj", "{BBD7FC47-C6CA-4B88-92AF-E8DB8526EE16}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project4_x64", "Project4\Project4.vcxproj", "{BBD7FC47-C6CA-4B88-92AF-E8DB8526EE16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,7 +20,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{85AC6D8F-66FF-44B0-BA39-082D544E6ADB}.Debug|x64.ActiveCfg = Debug|x64
-		{85AC6D8F-66FF-44B0-BA39-082D544E6ADB}.Debug|x64.Build.0 = Debug|x64
 		{85AC6D8F-66FF-44B0-BA39-082D544E6ADB}.Debug|x86.ActiveCfg = Debug|Win32
 		{85AC6D8F-66FF-44B0-BA39-082D544E6ADB}.Debug|x86.Build.0 = Debug|Win32
 		{85AC6D8F-66FF-44B0-BA39-082D544E6ADB}.Release|x64.ActiveCfg = Release|x64

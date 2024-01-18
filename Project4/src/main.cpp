@@ -81,5 +81,6 @@ A::A(const A& a, const A& b)
 //}
 int main()
 {
-	start();
+	//start();
+	testWenli();
 }

@@ -11,7 +11,7 @@
 #include "../inc/camera.h"
 
 #include <iostream>
-#include<filesystem>
+#include <filesystem>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
@@ -79,7 +79,7 @@ int lightTest()
 
     // build and compile our shader zprogram
     // ------------------------------------
-    auto file = "D:\code\gitfiles\openglLearn\Project4\resource\1.colors.vs";
+    //auto file = "D:\code\gitfiles\openglLearn\Project4\resource\1.colors.vs";
     std::string path = std::filesystem::current_path().string();
     Shader lightingShader((path+std::string("\\resource\\1.colors.vs")).c_str(), (path + std::string("\\resource\\1.colors.fs")).c_str());
     Shader lightCubeShader((path + std::string("\\resource\\1.light_cube.vs")).c_str(), (path + std::string("\\resource\\1.light_cube.fs")).c_str());

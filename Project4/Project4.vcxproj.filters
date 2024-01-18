@@ -17,6 +17,9 @@
     <Filter Include="resource">
       <UniqueIdentifier>{3b99a3c1-fdd1-4c36-8fd6-ce974a6b5207}</UniqueIdentifier>
     </Filter>
+    <Filter Include="resource\NewFilter1">
+      <UniqueIdentifier>{c978c331-e98e-41aa-8af4-30afa86fdf31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -31,6 +34,12 @@
     <ClCompile Include="src\color.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\stb_imageInit.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wenli.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\glad\include\glad\glad.h">
@@ -43,6 +52,9 @@
       <Filter>inc</Filter>
     </ClInclude>
     <ClInclude Include="inc\camera.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\stb_image.h">
       <Filter>inc</Filter>
     </ClInclude>
   </ItemGroup>

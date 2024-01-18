@@ -168,6 +168,47 @@ int test5() {
 	glfwTerminate();
 	return 0;
 }
+void drawTriangledd() {
+	// 顶点坐标
+	float vertices[] = {
+		-0.5f, -0.5f, 0.0f,  // 左下角
+		0.5f, -0.5f, 0.0f,   // 右下角
+		0.0f, 0.5f, 0.0f     // 顶部
+	};
+
+	// 创建GLFW窗口
+	GLFWwindow* window;
+	if (!glfwInit()) {
+		return;
+	}
+
+	window = glfwCreateWindow(800, 600, "Triangle", NULL, NULL);
+	if (!window) {
+		glfwTerminate();
+		return;
+	}
+
+	glfwMakeContextCurrent(window);
+
+	// 渲染循环
+	while (!glfwWindowShouldClose(window)) {
+		glClear(GL_COLOR_BUFFER_BIT);
+
+		// 绘制三角形
+		glBegin(GL_TRIANGLES);
+		glColor3f(1.0f, 0.0f, 0.0f);  // 设置颜色为红色
+		glVertex3fv(vertices);
+		glVertex3fv(vertices + 3);
+		glVertex3fv(vertices + 6);
+		glEnd();
+
+		glfwSwapBuffers(window);
+		glfwPollEvents();
+	}
+
+	// 清理资源
+	glfwTerminate();
+}
 int main(void)
 {
     //func();
@@ -176,12 +217,13 @@ int main(void)
     //drawTwoSameTriangle();
     //drawTwoSameTriangleWithdifferentCollor();
     //testPicture();
-    //testTexture();
+    testTexture();
     //testTranslate();
     //testPictureCoordianteTrans();
     //testPictureCoordiante36face();
     //testPictureCamera();
     //test5();
-	testRoateCube();
+	//testRoateCube();
+	//drawTriangledd();
     return 0;
 }
