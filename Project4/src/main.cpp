@@ -1,5 +1,8 @@
 
 #include <iostream>
+#include <vector>
+#include <forward_list>
+#include <map>
 #include "glad/include/glad/glad.h"
 #include "GLFW/glfw3.h"
 
