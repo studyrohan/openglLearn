@@ -1,5 +1,8 @@
 
 #include <iostream>
+#include <vector>
+#include <map>
+#include <forward_list>
 #include "glad/include/glad/glad.h"
 #include "GLFW/glfw3.h"
 
@@ -152,8 +155,12 @@ void testForwardList()
 int main()
 {
 	//start();
+<<<<<<< HEAD
+	testWenli();
+=======
 	//testVector();
 	testForwardList();
 	system("Pause");
 	return 0;
+>>>>>>> 17e8bc123fa0a8e53ad17f97544674d9a30cdfc7
 }

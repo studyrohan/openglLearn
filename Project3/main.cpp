@@ -18,7 +18,7 @@
 #define GLEW_STATIC
 #include <iostream>
 
-#include <GL/glew.h>
+#include "GL/glew.h"
 #include <GLFW/glfw3.h>
 #pragma comment( linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"" )
 
