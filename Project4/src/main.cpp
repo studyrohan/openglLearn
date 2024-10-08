@@ -3,51 +3,20 @@
 #include <vector>
 #include <forward_list>
 #include <map>
+#include <list>
 #include "glad/include/glad/glad.h"
 #include "GLFW/glfw3.h"
 
 
 #include"../inc/header.h"
+#include "../casttest.h"
+#include "../castdrive.h"
+#include <sstream>
+
 using namespace std;
-class base {
-public:
-	void test()
-	{
-		cout << "base test" << std::endl;
-	}
-	base() {
-		cout << "base constructor" << endl;
-		int* b = new int[5];
-	}
-	~base() {
-		cout << "base destructor" << endl;
-		delete[] b;
-	}
 
-private:
-	int* b;
-};
+class derived;
 
-
-
-class derived : public base {
-public:
-	derived() {
-		cout << "derived constructor" << endl;
-		int* d = new int[8];
-	}
-	~derived() {
-		cout << "derived destructor" << endl;
-		delete[] d;
-	}
-	void test()
-	{
-		cout << "derived test" << std::endl;
-	}
-
-private:
-	int* d;
-};
 class A {
 public:
 	A();
@@ -127,6 +96,16 @@ int testVector()
 	int b = 0,c= 1,d =2;
 	a.push_back(b);
 	a.emplace_back(c);
+
+
+	{
+		base* b = new base();
+		//derived* d = dynamic_cast<derived*>(b);
+		static_cast<derived*>(b);
+		auto d = (derived*)(b);
+
+	}
+
 	return 0;
 }
 void testForwardList()
@@ -152,11 +131,80 @@ void testForwardList()
 //
 //	return 0;
 //}
+
+void testSizeofString()
+{
+	std::string a;
+	std::cout << sizeof(a) << std::endl;
+	a.assign("da");
+	a.front();
+	a.back();
+	a.push_back('k');
+	a.pop_back();
+	a.append("fads");
+	a.max_size();
+	a.capacity();
+
+
+	a.data();
+	a.c_str();
+	a.length();
+	a.at(0);
+	a.size();
+	a.reserve(9);
+	a.resize(12);
+	a.find('d');
+	a.rfind('d');
+	a.find_first_of('d');
+	a.compare("da");
+	a.substr(2);
+	a.clear();
+	a.insert(a.begin(),'d');
+
+	std::cout << sizeof(a) << std::endl;
+	a.append("fads");
+	std::cout << sizeof(a) << std::endl;
+
+	std::list<int>list;
+	
+	list.push_back(12);
+	list.push_back(12);
+	list.push_back(12);
+	std::list<int>list2(list);
+	std::list<int>list3 =list;
+
+	list.clear();
+	list2.clear();
+	list3.clear();
+
+}
+
+int testStringStream()
+{
+	string a = "1+2i", b = "1+3i";
+	std::istringstream sa(a), sb(b);
+	std::ostringstream out;
+
+	int ra, ia, rb, ib;
+	char buff,buff1;
+	// only read integer values to get the real and imaginary part of 
+	// of the original complex number
+	sa >> ra >> buff >> ia >> buff1;
+	sb >> rb >> buff >> ib >> buff1;
+
+	out << ra * rb - ia * ib << '+' << ra * ib + ia * rb << 'i';
+
+	// final result in string format
+	string result = out.str();
+	return 0;
+}
 int main()
 {
 	//start();
 	//testVector();
-	testForwardList();
+	testStringStream();
+	testSizeofString();
+	//testForwardList();
 	system("Pause");
 	return 0;
 }

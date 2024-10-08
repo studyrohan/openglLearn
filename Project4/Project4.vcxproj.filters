@@ -40,6 +40,9 @@
     <ClCompile Include="src\wenli.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="casttest.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\glad\include\glad\glad.h">
@@ -56,6 +59,12 @@
     </ClInclude>
     <ClInclude Include="inc\stb_image.h">
       <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="casttest.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="castdrive.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

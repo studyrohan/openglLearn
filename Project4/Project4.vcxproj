@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="casttest.cpp" />
     <ClCompile Include="src\color.cpp" />
     <ClCompile Include="src\glad\src\glad.c" />
     <ClCompile Include="src\main.cpp" />
@@ -148,6 +149,8 @@
     <ClCompile Include="src\wenli.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="castdrive.h" />
+    <ClInclude Include="casttest.h" />
     <ClInclude Include="inc\camera.h" />
     <ClInclude Include="inc\header.h" />
     <ClInclude Include="inc\shader_m.h" />
